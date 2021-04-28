@@ -55,7 +55,7 @@ window.getCaptchaToken = function(token) {
 ### Man-machine verification enabled
 you can validate by click button. Like this, just register click function.
 ```
-var element = document.getElementById('check');
+var element = document.getElementById('validate');
 element.onclick = GoogleReCaptcha.validate;
 ```
 
