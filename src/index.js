@@ -19,7 +19,7 @@
     }
     /**
      * @method Initialize JSSDK of Google reCAPTCHA v2
-     * @param host => api hostname, default use www.google.com. Specially, some areas require network proxying, such as China, just set host: www.recaptcha.net.(required)
+     * @param host => api hostname, default use www.google.com. Specially, some areas require network proxying, such as China, just set host: www.recaptcha.net.(optional)
      */
     GoogleReCaptcha.init = function(host) {
         var domain = host || 'www.google.com';
@@ -32,7 +32,7 @@
     }
     /**
      * @method Man-machine verification enabled
-     * @param event DOM event
+     * @param event => DOM event.(required)
      */
     GoogleReCaptcha.validate = function(event) {
         event.preventDefault();
