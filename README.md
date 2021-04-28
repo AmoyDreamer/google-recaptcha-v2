@@ -29,15 +29,16 @@ you can get data-sitekey from [Google reCAPTCHA Admin Console](https://www.googl
 #### Example-CDN
 ```
 <script>
-    //Initialize JSSDK of Google reCAPTCHA v2
-    GoogleReCaptcha.init()
+    GoogleReCaptcha.init()//Initialize JSSDK of Google reCAPTCHA v2
+    //GoogleReCaptcha.init('www.recaptcha.net');//Specially, some areas require network proxying, such as China, just set host = "www.recaptcha.net"
 </script>
 ```
 
 #### Example-CommonJS
 ```
 var GoogleReCaptcha = require('google-recaptcha-v2');
-GoogleReCaptcha.init();
+GoogleReCaptcha.init();//Initialize JSSDK of Google reCAPTCHA v2
+//GoogleReCaptcha.init('www.recaptcha.net');//Specially, some areas require network proxying, such as China, just set host = "www.recaptcha.net"
 ```
 
 ### Define the callback function of man-machine verification
@@ -62,10 +63,10 @@ element.onclick = GoogleReCaptcha.validate;
 ## Method
 
 GoogleReCaptcha.init(host)//Initialize JSSDK
-- host => api hostname, default use www.google.com. Specially, some areas require network proxying, such as China, just set host: www.recaptcha.net.(optional)
+- host => optional, data type is String, that means api hostname, default use *www.google.com*. Specially, some areas require network proxying, such as China, just set host: *www.recaptcha.net*.
 
 GoogleReCaptcha.validate(event)//Man-machine verification enabled
-- event => DOM event.(required)
+- event => required, DOM event.
 
 ## License
 google-recaptcha-v2 is [MIT licensed](https://github.com/AmoyDreamer/google-recaptcha-v2/blob/master/LICENSE).
