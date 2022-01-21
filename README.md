@@ -38,7 +38,7 @@ function getCaptchaToken(token) {
     // Initialize JSSDK of Google reCAPTCHA v2
     GoogleReCaptcha.init({
         siteKey: '_your_site_key_',
-		callback: getCaptchaToken
+        callback: getCaptchaToken
     })
 </script>
 ```
