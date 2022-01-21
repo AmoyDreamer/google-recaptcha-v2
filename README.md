@@ -14,33 +14,12 @@ npm install google-recaptcha-v2 --save-dev
 
 ## Usage
 
-### Step1
+### Import required html tag
 The easiest method for using the invisible reCAPTCHA widget on your page. The necessary attributes are a class name 'g-recaptcha', your site key in the data-sitekey attribute, and the name of a JavaScript callback to handle completion of the captcha in the data-callback attribute.
 ```html
 <div id="recaptcha" class="g-recaptcha" style="display:none"></div>
 ```
 you can get data-sitekey from [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin/)
-
-### Step2
-#### Example-CDN
-```html
-<script>
-    // Initialize JSSDK of Google reCAPTCHA v2
-    GoogleReCaptcha.init({
-        siteKey: '_your_site_key_',// alias of data-sitekey
-		callback: getCaptchaToken,// alias of data-callback
-    })
-</script>
-```
-
-#### Example-CommonJS
-```js
-var GoogleReCaptcha = require('google-recaptcha-v2');
-GoogleReCaptcha.init({
-    siteKey: '_your_site_key_',// alias of data-sitekey
-    callback: getCaptchaToken,// alias of data-callback
-})
-```
 
 ### Define the callback function of man-machine verification
 This is data-callback attribute.
@@ -52,6 +31,27 @@ function getCaptchaToken(token) {
     }
 }
 ```
+### Initialize JSSDK
+#### Example-CDN
+```html
+<script>
+    // Initialize JSSDK of Google reCAPTCHA v2
+    GoogleReCaptcha.init({
+        siteKey: '_your_site_key_',
+		callback: getCaptchaToken
+    })
+</script>
+```
+
+#### Example-CommonJS
+```js
+var GoogleReCaptcha = require('google-recaptcha-v2');
+GoogleReCaptcha.init({
+    siteKey: '_your_site_key_',
+    callback: getCaptchaToken
+})
+```
+
 ### Man-machine verification enabled
 you can validate by click button. Like this, just register click function.
 ```js
@@ -61,7 +61,7 @@ element.onclick = GoogleReCaptcha.validate;
 
 ## Method
 
-### Initialize JSSDK
+### Initialize Google reCAPTCHA
 GoogleReCaptcha.init(options)
  - options => {Object} Required. The options of Google reCAPTCHA v2.
 
