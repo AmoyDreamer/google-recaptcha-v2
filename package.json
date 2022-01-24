@@ -1,6 +1,6 @@
 {
   "name": "google-recaptcha-v2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple library of captcha based on Google reCAPTCHA v2.",
   "main": "index.js",
   "scripts": {

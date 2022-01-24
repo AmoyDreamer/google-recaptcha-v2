@@ -23,7 +23,7 @@
      * @param {String} level => message level.(optional)
      */
     function outputMsg(msg, level) {
-        var level = level || '';
+        var level = level || 'log';
         if (console.hasOwnProperty(level)) {
             console[level]('Module "google-recaptcha-v2" ' + level + ' message => ' + msg);
         } else {
