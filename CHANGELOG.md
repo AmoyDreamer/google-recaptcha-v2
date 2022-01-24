@@ -1,3 +1,7 @@
+## 1.0.4 (2022.01.24)
+### Feature
+ - Update `README.md`.
+
 ## 1.0.3 (2022.01.24)
 ### Feature
  - Update the default method of output message on console.

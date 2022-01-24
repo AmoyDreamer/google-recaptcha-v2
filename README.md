@@ -67,11 +67,11 @@ GoogleReCaptcha.init(options)
 
 #### options
 - siteKey => {String} Required. Alias of data-sitekey.
-- callback => {String} Required. Alias of data-callback. The name of your callback function, executed when the user submits a successful response. The **g-recaptcha-response** token is passed to your callback.
+- callback => {Function} Required. Alias of data-callback. The name of your callback function, executed when the user submits a successful response. The **g-recaptcha-response** token is passed to your callback.
 - id => {String} Optional. The HTML element to render the reCAPTCHA widget. Specify the ID of the container. If you pass a valid value, **[Explicit Render](https://developers.google.com/recaptcha/docs/invisible#examples)** will be used first, otherwise **[Auto Render](https://developers.google.com/recaptcha/docs/invisible#auto_render)** will be used.
 - host => {String} Optional. That means api hostname, default use **www.google.com**. Specially, some areas require network proxying, such as China, just set host: **www.recaptcha.net**.
-- expiredCallback => {String} Optional. The name of your callback function, executed when the reCAPTCHA response expires and the user needs to re-verify.
-- errorCallback => {String} Optional. The name of your callback function, executed when reCAPTCHA encounters an error (usually network connectivity) and cannot continue until connectivity is restored. If you specify a function here, you are responsible for informing the user that they should retry. You can write a demo like this.
+- expiredCallback => {Function} Optional. The name of your callback function, executed when the reCAPTCHA response expires and the user needs to re-verify.
+- errorCallback => {Function} Optional. The name of your callback function, executed when reCAPTCHA encounters an error (usually network connectivity) and cannot continue until connectivity is restored. If you specify a function here, you are responsible for informing the user that they should retry. You can write a demo like this.
 ```js
 function errorCallback(res) {
     var code = res.code;// error code
